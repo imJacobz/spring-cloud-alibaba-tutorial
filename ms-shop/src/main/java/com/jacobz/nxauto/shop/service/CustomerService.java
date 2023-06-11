@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "nx-auto-ms-customer",fallback = CustomerServiceFallback.class)
 @Primary
 public interface CustomerService {
-    @GetMapping("/customer/{id}")
+    @GetMapping("/api/v1/customer/{id}")
     ResponseData getCustomerById(@PathVariable("id") Integer id) ;
 }
