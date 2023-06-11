@@ -27,5 +27,5 @@ Windows:
 3. run ms-customer and ms-shop, port 8081 and 8082
 4. run app-gateway, port 8080
 5. access [http://localhost:8848/nacos/index.html#/serviceManagement](http://localhost:8848/nacos/index.html#/serviceManagement) to check services are registered in nacos
-6. http://localhost:8080/customer/1, customer service.
-7. http://localhost:8080/shop/customer/1, shop service.
+6. http://localhost:8080/api/v1/customer/1, customer service.
+7. http://localhost:8080/api/v1/shop/customer/1, shop service.
