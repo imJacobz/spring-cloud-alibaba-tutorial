@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: nx-auto-ms-customer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
