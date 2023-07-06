@@ -1,15 +1,21 @@
 server:
   port: 8081
 
-spring:
+#spring:
+#  application:
+#    name: nx-auto-ms-customer
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: localhost:8848
+
+dubbo:
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: nacos://localhost:8848
   application:
     name: nx-auto-ms-customer
-  cloud:
-    nacos:
-      discovery:
-        server-addr: localhost:8848
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
+  consumer:
+    timeout: 5000
