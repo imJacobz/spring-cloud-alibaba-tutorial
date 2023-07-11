@@ -1,13 +1,13 @@
 server:
   port: 8081
 
-#spring:
-#  application:
-#    name: nx-auto-ms-customer
-#  cloud:
-#    nacos:
-#      discovery:
-#        server-addr: localhost:8848
+spring:
+  application:
+    name: nx-auto-ms-customer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
 
 dubbo:
   protocol:

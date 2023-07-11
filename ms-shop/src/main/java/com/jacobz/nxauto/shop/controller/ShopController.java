@@ -21,7 +21,7 @@ import java.util.List;
 @RequestMapping("/api/v1")
 public class ShopController {
 
-    @DubboReference
+    @DubboReference(check = false, lazy = true, mock = "true")
     private final CustomerService customerService;
     private final MockShopService mockShopService;
 
