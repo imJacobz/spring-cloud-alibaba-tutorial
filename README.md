@@ -20,7 +20,7 @@ ms-*: micro services
 
 ## How To Run
 
-1. Setup MariaDB server and import the dev.sql file
+1. Set up a MariaDB server and import the dev.sql file, set up a Redis server.
 2. Download Nacos Server from <https://nacos.io>, unzip and run a standalone instance with following command:  
 
     Linux and macOS:
