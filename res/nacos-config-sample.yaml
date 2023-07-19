@@ -1,0 +1,35 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://{server_address}:{port}/{database_name}
+    username: foo
+    password: bar
+  session:
+    redis:
+      flush-mode: on_save
+      namespace: spring_session
+  data:
+    redis:
+      host: {redis_server_address}
+      port: {redis_port}
+      password: foobared
+      database: 0
+      lettuce:
+        pool:
+          max-wait: -1
+          max-idle: 8
+          max-active: 8
+          min-idle: 1
+logging:
+  level:
+    root: info
+    org:
+      mybatis: DEBUG
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

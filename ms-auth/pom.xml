@@ -9,13 +9,8 @@
         <version>${revision}</version>
     </parent>
 
-    <artifactId>ms-customer</artifactId>
+    <artifactId>ms-auth</artifactId>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
     <dependencies>
         <dependency>
             <groupId>com.jacobz</groupId>
@@ -47,4 +42,5 @@
             <artifactId>mariadb-java-client</artifactId>
         </dependency>
     </dependencies>
+
 </project>

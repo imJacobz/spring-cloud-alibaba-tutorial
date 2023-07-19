@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jacobz.nxauto.common.mapper.CustomerMapper">
+
+    <resultMap id="BaseResultMap" type="com.jacobz.nxauto.common.entity.Customer">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="addTime" column="add_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="status" column="status" jdbcType="TINYINT"/>
+            <result property="customerName" column="customer_name" jdbcType="VARCHAR"/>
+            <result property="address" column="address" jdbcType="VARCHAR"/>
+            <result property="city" column="city" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,add_time,update_time,
+        status,customer_name,address,
+        city
+    </sql>
+</mapper>

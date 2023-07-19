@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jacobz.nxauto.common.mapper.RoleMapper">
+
+    <resultMap id="BaseResultMap" type="com.jacobz.nxauto.common.entity.Role">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="addTime" column="add_time" jdbcType="TIMESTAMP"/>
+            <result property="enabled" column="enabled" jdbcType="TINYINT"/>
+            <result property="roleName" column="role_name" jdbcType="VARCHAR"/>
+            <result property="roleDescription" column="role_description" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id as role_id, add_time,enabled,
+        role_name,role_description
+    </sql>
+</mapper>

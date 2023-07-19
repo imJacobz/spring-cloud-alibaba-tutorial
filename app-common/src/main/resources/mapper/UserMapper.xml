@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jacobz.nxauto.common.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.jacobz.nxauto.common.entity.User">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="addTime" column="add_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="status" column="enabled" jdbcType="TINYINT"/>
+        <result property="username" column="username" jdbcType="VARCHAR"/>
+        <result property="password" column="password" jdbcType="VARCHAR"/>
+        <result property="email" column="email" jdbcType="VARCHAR"/>
+        <result property="cellPhone" column="cell_phone" jdbcType="VARCHAR"/>
+        <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
+        <result property="github" column="github" jdbcType="VARCHAR"/>
+        <result property="roleId" column="role_id" jdbcType="INTEGER"/>
+    </resultMap>
+    <resultMap id="UserRoleMap" type="com.jacobz.nxauto.common.entity.User">
+        <id property="id" column="user_id" jdbcType="INTEGER"/>
+        <result property="addTime" column="add_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="status" column="enabled" jdbcType="TINYINT"/>
+        <result property="username" column="username" jdbcType="VARCHAR"/>
+        <result property="password" column="password" jdbcType="VARCHAR"/>
+        <result property="email" column="email" jdbcType="VARCHAR"/>
+        <result property="cellPhone" column="cell_phone" jdbcType="VARCHAR"/>
+        <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
+        <result property="github" column="github" jdbcType="VARCHAR"/>
+        <result property="roleId" column="role_id" jdbcType="INTEGER"/>
+        <collection property="roles" ofType="com.jacobz.nxauto.common.entity.Role">
+            <id property="id" column="role_id" jdbcType="INTEGER"/>
+            <result property="roleName" column="role_name" jdbcType="VARCHAR"/>
+            <result property="roleDescription" column="role_description" jdbcType="VARCHAR"/>
+        </collection>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        sys_user.id as user_id , sys_user.add_time, sys_user.status,
+        username, password,email,
+        cell_phone,avatar,github
+    </sql>
+    <select id="selectByUsernameOrEmail" resultMap="UserRoleMap">
+        select<include refid="Base_Column_List"/>, sys_role.id as role_id, role_name, role_description
+        from sys_user join sys_role_user on sys_user.id = sys_role_user.user_id
+        join sys_role on sys_role_user.role_id = sys_role.id
+        where sys_user.status=1 and (username = #{name} or email=#{name})
+    </select>
+</mapper>

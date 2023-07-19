@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.jacobz</groupId>
         <artifactId>nxauto-ali</artifactId>
-        <version>1.0.0</version>
+        <version>${revision}</version>
     </parent>
 
     <artifactId>app-gateway</artifactId>

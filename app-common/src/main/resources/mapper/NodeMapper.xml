@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jacobz.nxauto.common.mapper.NodeMapper">
+
+    <resultMap id="BaseResultMap" type="com.jacobz.nxauto.common.entity.Node">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="enabled" column="enabled" jdbcType="TINYINT"/>
+            <result property="addTime" column="add_time" jdbcType="TIMESTAMP"/>
+            <result property="menuName" column="menu_name" jdbcType="VARCHAR"/>
+            <result property="menuType" column="menu_type" jdbcType="INTEGER"/>
+            <result property="menuOrder" column="menu_order" jdbcType="INTEGER"/>
+            <result property="url" column="url" jdbcType="VARCHAR"/>
+            <result property="parentMenu" column="parent_menu" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,enabled,add_time,
+        menu_name,menu_type,menu_order,
+        url,parent_menu
+    </sql>
+</mapper>

@@ -12,6 +12,10 @@ spring:
         locator:
           enabled: true
       routes:
+        - id: auth
+          uri: lb://nx-auto-ms-auth
+          predicates:
+            - Path=/api/v1/auth/**
         - id: customer
           uri: lb://nx-auto-ms-customer
           predicates:

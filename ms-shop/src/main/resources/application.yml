@@ -1,9 +1,6 @@
 server:
   port: 8082
-
 spring:
-  application:
-    name: nx-auto-ms-shop
 #  devtools:
 #    livereload:
 #      port: 35731
@@ -11,12 +8,3 @@ spring:
     openfeign:
       circuitbreaker:
         enabled: true
-    nacos:
-      discovery:
-        server-addr: localhost:8848
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
