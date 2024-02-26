@@ -24,9 +24,9 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 @EnableMethodSecurity
 public class WebSecurityConfig {
 
-    private final AuthenticationEntryPoint authenticationEntryPoint; // 未登录的处理器
-    private final AuthenticationSuccessHandler authenticationSuccessHandler; // 登录成功的处理器
-    private final AuthenticationFailureHandler authenticationFailureHandler; // 登录失败的处理器
+    private final AuthenticationEntryPoint authenticationEntryPoint; // handler for not logged in
+    private final AuthenticationSuccessHandler authenticationSuccessHandler;
+    private final AuthenticationFailureHandler authenticationFailureHandler;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
