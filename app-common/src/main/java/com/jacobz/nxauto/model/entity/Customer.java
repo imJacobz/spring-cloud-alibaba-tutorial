@@ -25,10 +25,10 @@ public class Customer implements Serializable {
     @TableId(type = IdType.AUTO)
     private Integer id;
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "MMM/dd/yyyy HH:mm:ss")
     private Date addTime;
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "MMM/dd/yyyy HH:mm:ss")
     private Date updateTime;
 
     private Integer status;

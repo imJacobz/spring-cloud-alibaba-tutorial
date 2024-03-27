@@ -54,15 +54,16 @@ ms-*: micro services
    it will return a json response like this:
 
     ```json
-    {
-        "msg": "OK",
-        "data": {
-            "userId": 1,
-            "email": "jacob@example.com",
-            "token": "4be4d210-1f78-4b8e-b88d-bd1304a2246c",
-            "username": "jacob"
-        },
-        "status": 200
+   {
+      "code": "200",
+      "message": "Success",
+      "data": {
+        "userId": 1,
+        "email": "jacob@example.com",
+        "token": "75de3c9e-db56-4382-9c6e-df79a5a2570e",
+        "username": "jacob"
+      },
+      "timestamp": 1711515239181
     }
     ```
 
@@ -77,16 +78,17 @@ ms-*: micro services
 
     ```json
     {
-        "msg": "OK",
+        "code": "200",
+        "message": "success on: 8081",
         "data": {
             "id": 1,
-            "addTime": "2020-02-17T09:54:07.000+00:00",
-            "updateTime": "2022-08-28T16:57:03.000+00:00",
+            "addTime": "Feb/17/2020 09:54:07",
+            "updateTime": "Aug/28/2022 16:57:03",
             "status": 1,
             "customerName": "Jacob Zyrael",
             "address": "Somewhere",
             "city": "Austin"
         },
-        "status": 200
+        "timestamp": 1711515379068
     }
     ```
