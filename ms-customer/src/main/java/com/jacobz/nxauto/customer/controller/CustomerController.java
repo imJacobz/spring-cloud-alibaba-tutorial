@@ -2,11 +2,9 @@ package com.jacobz.nxauto.customer.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.jacobz.nxauto.customer.service.CustomerService;
-import com.jacobz.nxauto.model.entity.Customer;
 import com.jacobz.nxauto.model.ResponseData;
+import com.jacobz.nxauto.model.entity.Customer;
 import jakarta.annotation.Resource;
-import lombok.RequiredArgsConstructor;
-//import org.springframework.security.access.prepost.PreAuthorize;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;

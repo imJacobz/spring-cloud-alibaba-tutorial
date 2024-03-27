@@ -1,8 +1,7 @@
 package com.jacobz.nxauto.shop.service;
 
-import com.jacobz.nxauto.model.entity.Shop;
 import com.baomidou.mybatisplus.extension.service.IService;
-import org.springframework.web.bind.annotation.PathVariable;
+import com.jacobz.nxauto.model.entity.Shop;
 
 import java.util.List;
 

@@ -1,24 +1,20 @@
 package com.jacobz.nxauto.shop.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jacobz.nxauto.feign.CustomerInfoFeignApi;
+import com.jacobz.nxauto.mapper.ShopMapper;
 import com.jacobz.nxauto.model.ResponseData;
 import com.jacobz.nxauto.model.ReturnCode;
 import com.jacobz.nxauto.model.entity.Customer;
 import com.jacobz.nxauto.model.entity.Shop;
-import com.jacobz.nxauto.mapper.ShopMapper;
 import com.jacobz.nxauto.shop.service.ShopService;
 import io.seata.spring.annotation.GlobalTransactional;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.PathVariable;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service

@@ -1,11 +1,6 @@
 package com.jacobz.nxauto.shop.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.jacobz.nxauto.feign.CustomerInfoFeignApi;
 import com.jacobz.nxauto.model.ResponseData;
-import com.jacobz.nxauto.model.ReturnCode;
-import com.jacobz.nxauto.model.entity.Customer;
 import com.jacobz.nxauto.model.entity.Shop;
 import com.jacobz.nxauto.shop.service.ShopService;
 import jakarta.annotation.Resource;
