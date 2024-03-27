@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: nx-auto-gateway
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      discovery:
+        server-addr: localhost:8848
+      config:
+        enabled: false
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: auth
+          uri: lb://nx-auto-ms-auth
+          predicates:
+            - Path=/api/auth/**
+        - id: customer
+          uri: lb://nx-auto-ms-customer
+          predicates:
+          - Path=/api/customer/**
+        - id: shop
+          uri: lb://nx-auto-ms-shop
+          predicates:
+          - Path=/api/shop/**
+
+
+server:
+  port: 8080

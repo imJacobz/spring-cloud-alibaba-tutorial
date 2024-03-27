@@ -1,0 +1,24 @@
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8858
+        port: 8719
+    openfeign:
+      circuitbreaker:
+        enabled: true
+      client:
+        config:
+          default:
+            connectTimeout: 10000
+            readTimeout: 10000
+      httpclient:
+        hc5:
+          enabled: true
+      compression:
+        request:
+          enabled: true
+          min-request-size: 2048 # minimum trigger size
+          mime-types: text/xml,application/xml,application/json
+        response:
+          enabled: true

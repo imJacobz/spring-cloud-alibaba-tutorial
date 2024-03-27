@@ -143,29 +143,6 @@ INSERT INTO `sys_role_node` (`id`, `role_id`, `menu_id`) VALUES (7, 2, 2);
 INSERT INTO `sys_role_node` (`id`, `role_id`, `menu_id`) VALUES (8, 2, 3);
 COMMIT;
 
--- ----------------------------
--- Table structure for sys_role_user
--- ----------------------------
-DROP TABLE IF EXISTS `sys_role_user`;
-CREATE TABLE `sys_role_user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `role_id` int(11) DEFAULT NULL,
-  `user_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `ur_r_fk` (`role_id`),
-  KEY `ur_u_fk` (`user_id`),
-  CONSTRAINT `ur_r_fk` FOREIGN KEY (`role_id`) REFERENCES `sys_role` (`id`),
-  CONSTRAINT `ur_u_fk` FOREIGN KEY (`user_id`) REFERENCES `sys_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
-
--- ----------------------------
--- Records of sys_role_user
--- ----------------------------
-BEGIN;
-INSERT INTO `sys_role_user` (`id`, `role_id`, `user_id`) VALUES (1, 1, 1);
-INSERT INTO `sys_role_user` (`id`, `role_id`, `user_id`) VALUES (2, 2, 2);
-INSERT INTO `sys_role_user` (`id`, `role_id`, `user_id`) VALUES (3, 3, 1);
-COMMIT;
 
 -- ----------------------------
 -- Table structure for sys_user
@@ -195,3 +172,27 @@ INSERT INTO `sys_user` (`id`, `add_time`, `update_time`, `status`, `username`, `
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
+
+-- ----------------------------
+-- Table structure for sys_role_user
+-- ----------------------------
+DROP TABLE IF EXISTS `sys_role_user`;
+CREATE TABLE `sys_role_user` (
+                                 `id` int(11) NOT NULL AUTO_INCREMENT,
+                                 `role_id` int(11) DEFAULT NULL,
+                                 `user_id` int(11) DEFAULT NULL,
+                                 PRIMARY KEY (`id`),
+                                 KEY `ur_r_fk` (`role_id`),
+                                 KEY `ur_u_fk` (`user_id`),
+                                 CONSTRAINT `ur_r_fk` FOREIGN KEY (`role_id`) REFERENCES `sys_role` (`id`),
+                                 CONSTRAINT `ur_u_fk` FOREIGN KEY (`user_id`) REFERENCES `sys_user` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+-- ----------------------------
+-- Records of sys_role_user
+-- ----------------------------
+BEGIN;
+INSERT INTO `sys_role_user` (`id`, `role_id`, `user_id`) VALUES (1, 1, 1);
+INSERT INTO `sys_role_user` (`id`, `role_id`, `user_id`) VALUES (2, 2, 2);
+INSERT INTO `sys_role_user` (`id`, `role_id`, `user_id`) VALUES (3, 3, 1);
+COMMIT;

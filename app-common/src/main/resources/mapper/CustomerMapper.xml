@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jacobz.nxauto.common.mapper.CustomerMapper">
+<mapper namespace="com.jacobz.nxauto.mapper.CustomerMapper">
 
-    <resultMap id="BaseResultMap" type="com.jacobz.nxauto.common.entity.Customer">
+    <resultMap id="BaseResultMap" type="com.jacobz.nxauto.model.entity.Customer">
             <id property="id" column="id" jdbcType="INTEGER"/>
             <result property="addTime" column="add_time" jdbcType="TIMESTAMP"/>
             <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>

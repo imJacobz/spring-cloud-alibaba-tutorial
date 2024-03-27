@@ -1,0 +1,3 @@
+spring:
+  security:
+    requestMatchers: /hello,/world

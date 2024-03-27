@@ -1,26 +1,28 @@
 # NX-AUTO-ALI
 
-A simple example using spring cloud alibaba
+An example using spring cloud alibaba
 
 ## Updates
 
-1. Upgrade SpringBoot version to 3.1.1
+1. Upgrade SpringCloud version to 2023.0.0
 2. Add Spring Security to protect APIs.
 3. Add Spring Session.
 4. Integrated with MyBatis-Plus.
 5. Use Nacos central configuration.
+6. Seata global transaction support.
+7. Sentinel flow control support.
+8. Zipkin support.
 
 ## Project Structure
 
-app-gateway: gateway service
-
-app-common: core entities, models, repositories/mappers, spring security filters
-
+app-common: core entities, models, repositories/mappers, feign APIs  
+app-security: spring security core config and filters
+ms-gateway: gateway service  
 ms-*: micro services
 
 ## How To Run
 
-1. Set up a MariaDB server and import the dev.sql file, set up a Redis server.
+1. Set up a MySQL server and import the dev.sql file, set up a Redis server.
 2. Download Nacos Server from <https://nacos.io>, unzip and run a standalone instance with following command:  
 
     Linux and macOS:
@@ -45,7 +47,7 @@ ms-*: micro services
 8. Open a terminal window, access login API to get X-Auth-Token:
 
     ```bash
-      curl --request POST 'http://localhost:8080/api/v1/auth/login' \
+      curl --request POST 'http://localhost:8080/api/auth/login' \
           -d "username=jacob&password=000000"
     ```
 
@@ -67,7 +69,7 @@ ms-*: micro services
 9. Then access other APIs with X-Auth-Token in request header, for example:
 
     ```bash
-    curl -X GET 'http://localhost:8080/api/v1/customer/1'\
+    curl -X GET 'http://localhost:8080/api/customer/1'\
          -H 'X-Auth-Token:4be4d210-1f78-4b8e-b88d-bd1304a2246c'
     ```
 

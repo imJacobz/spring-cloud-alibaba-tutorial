@@ -1,10 +1,20 @@
 server:
   port: 8082
 spring:
-#  devtools:
-#    livereload:
-#      port: 35731
-  cloud:
-    openfeign:
-      circuitbreaker:
-        enabled: true
+  profiles:
+    active: dev
+    include:
+      - sentinel
+      - seata
+      - security
+feign:
+  sentinel:
+    enabled: true
+
+management:
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  tracing:
+    sampling:
+      probability: 1.0

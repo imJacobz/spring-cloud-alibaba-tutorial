@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jacobz.nxauto.common.mapper.UserMapper">
+<mapper namespace="com.jacobz.nxauto.mapper.UserMapper">
 
-    <resultMap id="BaseResultMap" type="com.jacobz.nxauto.common.entity.User">
+    <resultMap id="BaseResultMap" type="com.jacobz.nxauto.model.entity.User">
         <id property="id" column="id" jdbcType="INTEGER"/>
         <result property="addTime" column="add_time" jdbcType="TIMESTAMP"/>
         <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
@@ -17,7 +17,7 @@
         <result property="github" column="github" jdbcType="VARCHAR"/>
         <result property="roleId" column="role_id" jdbcType="INTEGER"/>
     </resultMap>
-    <resultMap id="UserRoleMap" type="com.jacobz.nxauto.common.entity.User">
+    <resultMap id="UserRoleMap" type="com.jacobz.nxauto.model.entity.User">
         <id property="id" column="user_id" jdbcType="INTEGER"/>
         <result property="addTime" column="add_time" jdbcType="TIMESTAMP"/>
         <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
@@ -29,7 +29,7 @@
         <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
         <result property="github" column="github" jdbcType="VARCHAR"/>
         <result property="roleId" column="role_id" jdbcType="INTEGER"/>
-        <collection property="roles" ofType="com.jacobz.nxauto.common.entity.Role">
+        <collection property="roles" ofType="com.jacobz.nxauto.model.entity.Role">
             <id property="id" column="role_id" jdbcType="INTEGER"/>
             <result property="roleName" column="role_name" jdbcType="VARCHAR"/>
             <result property="roleDescription" column="role_description" jdbcType="VARCHAR"/>

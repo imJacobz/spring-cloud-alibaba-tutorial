@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@ComponentScan({"com.jacobz.nxauto.customer", "com.jacobz.nxauto.security"})
+@ComponentScan({"com.jacobz.nxauto"})
 public class MSCustomerApplication {
 
     public static void main(String[] args) {

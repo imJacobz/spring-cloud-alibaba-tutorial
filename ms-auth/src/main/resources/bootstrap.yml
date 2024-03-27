@@ -6,7 +6,10 @@ spring:
   cloud:
     nacos:
       server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
       config:
         file-extension: yaml
         group: DEFAULT_GROUP
         prefix: nx-auto-default-config
+        # prefix: nx-auto-security-config # you can provide another config file name if you use distributed db or something

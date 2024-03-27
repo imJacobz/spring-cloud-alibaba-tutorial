@@ -1,2 +1,6 @@
 server:
   port: 8090
+
+spring:
+  security:
+    requestMatchers: /hello,/world

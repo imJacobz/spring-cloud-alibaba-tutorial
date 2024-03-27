@@ -1,2 +1,25 @@
 server:
   port: 8081
+
+spring:
+  profiles:
+    active: dev
+
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8858
+        port: 8719
+
+  security:
+    requestMatchers: /hello,/world # requestMatchers permitAll
+
+# ========================zipkin===================
+management:
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  tracing:
+    sampling:
+      probability: 1.0
+

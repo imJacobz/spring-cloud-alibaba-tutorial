@@ -4,8 +4,8 @@ spring:
       discovery:
         server-addr: localhost:8848
   datasource:
-    driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://{server_address}:{port}/{database_name}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://{server_address}:{port}/{database_name}
     username: foo
     password: bar
   session:
