@@ -12,9 +12,6 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * @TableName app_shop
- */
 @TableName(value = "app_shop")
 @Data
 @AllArgsConstructor
